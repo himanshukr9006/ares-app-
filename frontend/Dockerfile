@@ -2,10 +2,10 @@ FROM node:16-alpine
 
 WORKDIR /app
 
-COPY frontend/package*.json ./
+COPY package*.json ./
 RUN npm install
 
-COPY frontend .
+COPY . .
 
 ENV BACKEND_URL=http://backend:8000/api
 
